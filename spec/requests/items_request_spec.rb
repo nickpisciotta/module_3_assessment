@@ -49,7 +49,21 @@ describe "Items Controller" do
   it "adds an item" do
     item = create_item
     item2 = create_item
+    item_params = {name: "Name", description: "Description",
+                   image_url: "www.google.com"}
 
     expect(Item.count).to eq(2)
+
+    post "/api/v1/items", item_params
+
+    expect(response.status).to eq(201)
+    expect(Item.count).to eq(3)
+
+    parsed_response = JSON.parse(response.body)
+
+    expect(parsed_response["name"]).to eq("Name")
+    expect(parsed_response["description"]).to eq("Description")
+    expect(parsed_response["image_url"]).to eq("www.google.com")
+  end
 
 end

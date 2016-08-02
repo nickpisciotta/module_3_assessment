@@ -15,14 +15,10 @@ class Api::V1::ItemsController < ApplicationController
     head :no_content
   end
 
-  def new
-
-  end
-
   def create
     @item = Item.create(item_params)
     if @item.save
-      render :json => @item
+      render json: {@item, status: 201}
     end
   end
 

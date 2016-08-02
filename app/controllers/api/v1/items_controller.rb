@@ -12,5 +12,24 @@ class Api::V1::ItemsController < ApplicationController
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
+    head :no_content
   end
+
+  def new
+
+  end
+
+  def create
+    @item = Item.create(item_params)
+    if @item.save
+      render :json => @item
+    end
+  end
+
+
+  private
+    def item_params
+      params.permit(:name, :description, :image_url)
+    end
+
 end

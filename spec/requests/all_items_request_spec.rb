@@ -23,11 +23,11 @@ describe "Items Controller" do
 
     get "/api/v1/items/1"
 
-    expect(reponse.status).to eq(200)
+    expect(response.status).to eq(200)
 
     parsed_response = JSON.parse(response.body)
 
-    expect(parsed_response.count).to eq(1)
+    expect(parsed_response.kind_of?(Hash)).to eq(true)
     expect(parsed_response["name"]).to eq(item.name)
     expect(parsed_response["description"]).to eq(item.description)
     expect(parsed_response["image_url"]).to eq(item.image_url)

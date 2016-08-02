@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bestbuy.com/v1/stores(area(80202,25))?apiKey=tq72hpvtbbd4mue6f23kmsw2&format=json&pageSize=2&show=storeId,storeType,name
+    uri: https://api.bestbuy.com/v1/stores(area(80202,25))?apiKey=tq72hpvtbbd4mue6f23kmsw2&format=json&pageSize=15&show=storeType,name,city,distance,phone
     body:
       encoding: US-ASCII
       string: ''
@@ -21,13 +21,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 02 Aug 2016 17:24:14 GMT
+      - Tue, 02 Aug 2016 17:34:08 GMT
       Server:
       - thin 1.6.1 codename Death Proof
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1e-120.mashery.com
+      - prod-j-worker-us-east-1e-126.mashery.com
       Content-Length:
-      - '547'
+      - '2660'
       Connection:
       - keep-alive
     body:
@@ -35,33 +35,128 @@ http_interactions:
       string: |-
         {
           "from": 1,
-          "to": 2,
+          "to": 15,
           "total": 17,
           "currentPage": 1,
-          "totalPages": 9,
-          "queryTime": "0.005",
-          "totalTime": "0.015",
+          "totalPages": 2,
+          "queryTime": "0.003",
+          "totalTime": "0.012",
           "partial": false,
-          "canonicalUrl": "/v1/stores(area(\"80202\",25))?show=storeId,storeType,name&format=json&apiKey=tq72hpvtbbd4mue6f23kmsw2",
+          "canonicalUrl": "/v1/stores(area(\"80202\",25))?show=storeType,name,city,distance,phone&format=json&apiKey=tq72hpvtbbd4mue6f23kmsw2",
           "stores": [
             {
-              "storeId": 2740,
               "storeType": "Mobile",
-              "name": "Cherry Creek Shopping Center"
+              "name": "Cherry Creek Shopping Center",
+              "city": "Denver",
+              "distance": 3.25,
+              "phone": "303-270-9189"
             },
             {
-              "storeId": 1224,
               "storeType": "BigBox",
-              "name": "Belmar"
+              "name": "Belmar",
+              "city": "Lakewood",
+              "distance": 5.28,
+              "phone": "303-742-8039"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Colorado Blvd",
+              "city": "Denver",
+              "distance": 5.61,
+              "phone": "303-758-5805"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Denver West",
+              "city": "Lakewood",
+              "distance": 8.38,
+              "phone": "303-273-5617"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Westminster",
+              "city": "Westminster",
+              "distance": 8.54,
+              "phone": "303-426-4434"
+            },
+            {
+              "storeType": "Mobile",
+              "name": "Colorado Mills",
+              "city": "Lakewood",
+              "distance": 8.59,
+              "phone": "303-278-0601"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Northglenn",
+              "city": "Denver",
+              "distance": 9.12,
+              "phone": "303-252-8677"
+            },
+            {
+              "storeType": "Mobile",
+              "name": "Town Center at Aurora",
+              "city": "Aurora",
+              "distance": 9.66,
+              "phone": "303-326-0848"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Aurora",
+              "city": "Aurora",
+              "distance": 9.83,
+              "phone": "303-338-5797"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Littleton",
+              "city": "Littleton",
+              "distance": 10.45,
+              "phone": "303-932-7830"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Southglenn",
+              "city": "Centennial",
+              "distance": 11.0,
+              "phone": "303-797-3246"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "I70 & Tower Rd",
+              "city": "Aurora",
+              "distance": 11.73,
+              "phone": "303-373-9284"
+            },
+            {
+              "storeType": "Mobile",
+              "name": "Flatiron Crossing Mall ",
+              "city": "Broomfield",
+              "distance": 14.44,
+              "phone": "303-466-8624"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "S.E. Denver",
+              "city": "Lone Tree",
+              "distance": 14.98,
+              "phone": "303-649-9474"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "S.E. Aurora",
+              "city": "Aurora",
+              "distance": 18.51,
+              "phone": "303-693-0166"
             }
           ],
           "warnings": "Distances are in terms of miles (default)"
         }
     http_version: 
-  recorded_at: Tue, 02 Aug 2016 17:24:14 GMT
+  recorded_at: Tue, 02 Aug 2016 17:34:09 GMT
 - request:
     method: get
-    uri: https://api.bestbuy.com/v1/stores(area(80202,25))?apiKey=tq72hpvtbbd4mue6f23kmsw2&format=json&pageSize=2&show=storeId,storeType,name
+    uri: https://api.bestbuy.com/v1/stores(area(80202,25))?apiKey=tq72hpvtbbd4mue6f23kmsw2&format=json&pageSize=15&show=storeType,name,city,distance,phone
     body:
       encoding: US-ASCII
       string: ''
@@ -80,13 +175,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 02 Aug 2016 17:24:14 GMT
+      - Tue, 02 Aug 2016 17:34:09 GMT
       Server:
       - thin 1.6.1 codename Death Proof
       X-Mashery-Responder:
-      - prod-j-worker-us-east-1d-107.mashery.com
+      - prod-j-worker-us-east-1b-127.mashery.com
       Content-Length:
-      - '547'
+      - '2660'
       Connection:
       - keep-alive
     body:
@@ -94,28 +189,123 @@ http_interactions:
       string: |-
         {
           "from": 1,
-          "to": 2,
+          "to": 15,
           "total": 17,
           "currentPage": 1,
-          "totalPages": 9,
-          "queryTime": "0.005",
-          "totalTime": "0.015",
+          "totalPages": 2,
+          "queryTime": "0.003",
+          "totalTime": "0.012",
           "partial": false,
-          "canonicalUrl": "/v1/stores(area(\"80202\",25))?show=storeId,storeType,name&format=json&apiKey=tq72hpvtbbd4mue6f23kmsw2",
+          "canonicalUrl": "/v1/stores(area(\"80202\",25))?show=storeType,name,city,distance,phone&format=json&apiKey=tq72hpvtbbd4mue6f23kmsw2",
           "stores": [
             {
-              "storeId": 2740,
               "storeType": "Mobile",
-              "name": "Cherry Creek Shopping Center"
+              "name": "Cherry Creek Shopping Center",
+              "city": "Denver",
+              "distance": 3.25,
+              "phone": "303-270-9189"
             },
             {
-              "storeId": 1224,
               "storeType": "BigBox",
-              "name": "Belmar"
+              "name": "Belmar",
+              "city": "Lakewood",
+              "distance": 5.28,
+              "phone": "303-742-8039"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Colorado Blvd",
+              "city": "Denver",
+              "distance": 5.61,
+              "phone": "303-758-5805"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Denver West",
+              "city": "Lakewood",
+              "distance": 8.38,
+              "phone": "303-273-5617"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Westminster",
+              "city": "Westminster",
+              "distance": 8.54,
+              "phone": "303-426-4434"
+            },
+            {
+              "storeType": "Mobile",
+              "name": "Colorado Mills",
+              "city": "Lakewood",
+              "distance": 8.59,
+              "phone": "303-278-0601"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Northglenn",
+              "city": "Denver",
+              "distance": 9.12,
+              "phone": "303-252-8677"
+            },
+            {
+              "storeType": "Mobile",
+              "name": "Town Center at Aurora",
+              "city": "Aurora",
+              "distance": 9.66,
+              "phone": "303-326-0848"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Aurora",
+              "city": "Aurora",
+              "distance": 9.83,
+              "phone": "303-338-5797"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Littleton",
+              "city": "Littleton",
+              "distance": 10.45,
+              "phone": "303-932-7830"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "Southglenn",
+              "city": "Centennial",
+              "distance": 11.0,
+              "phone": "303-797-3246"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "I70 & Tower Rd",
+              "city": "Aurora",
+              "distance": 11.73,
+              "phone": "303-373-9284"
+            },
+            {
+              "storeType": "Mobile",
+              "name": "Flatiron Crossing Mall ",
+              "city": "Broomfield",
+              "distance": 14.44,
+              "phone": "303-466-8624"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "S.E. Denver",
+              "city": "Lone Tree",
+              "distance": 14.98,
+              "phone": "303-649-9474"
+            },
+            {
+              "storeType": "BigBox",
+              "name": "S.E. Aurora",
+              "city": "Aurora",
+              "distance": 18.51,
+              "phone": "303-693-0166"
             }
           ],
           "warnings": "Distances are in terms of miles (default)"
         }
     http_version: 
-  recorded_at: Tue, 02 Aug 2016 17:24:14 GMT
+  recorded_at: Tue, 02 Aug 2016 17:34:09 GMT
 recorded_with: VCR 3.0.3

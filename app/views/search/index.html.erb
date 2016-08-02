@@ -1,1 +1,6 @@
-<%= @stores %>
+
+<p>Total Stores: <%= @stores.total_stores %></p>
+
+<ul>
+  <% @stores.stores.each do |store %>
+    

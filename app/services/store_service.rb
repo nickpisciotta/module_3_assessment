@@ -4,7 +4,7 @@ class StoreService
     @_connection = Faraday.new("https://api.bestbuy.com/v1/")
     @_connection.params["apiKey"]   = ENV["best_buy_api_key"]
     @_connection.params["format"]   = "json"
-    @_connection.params["show"]     = "storeId,storeType,name"
+    @_connection.params["show"]     = "storeType,name,city,distance,phone"
     @_connection.params["pageSize"] = 2
   end
 

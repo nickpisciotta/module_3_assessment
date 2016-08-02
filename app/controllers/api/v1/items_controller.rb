@@ -18,10 +18,9 @@ class Api::V1::ItemsController < ApplicationController
   def create
     @item = Item.create(item_params)
     if @item.save
-      render json: {@item, status: 201}
+      render :json => @item, :status => :created
     end
   end
-
 
   private
     def item_params
